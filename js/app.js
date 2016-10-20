@@ -22,11 +22,11 @@ var ViewModel = function() {
   self.newNickname = ko.observable('');
 
   self.incrementCounter = function() {
-    self.currentCat().clickCount(self.currentCat().clickCount() + 1);
+    this.clickCount(this.clickCount() + 1);
   }
 
   self.addNickname = function() {
-    self.currentCat().nickNames.push(self.newNickname());
+    this.nickNames.push(self.newNickname());
     self.newNickname('');
   }
 
